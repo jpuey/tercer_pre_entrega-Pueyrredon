@@ -7,6 +7,7 @@ class Medicamento(models.Model):
     droga= models.CharField(max_length=20)
     inventario= models.IntegerField()
     receta= models.BooleanField()
+    vencimiento= models.DateField()
 
 
 class Medico(models.Model):
@@ -22,3 +23,9 @@ class Paciente(models.Model):
     apellido= models.CharField(max_length=10)
     obra_social= models.CharField(max_length=20)
     nafiliado= models.IntegerField()
+    email= models.EmailField()
+
+
+class Proveedor(models.Model):
+    nombre= models.CharField(max_length=20)
+    nproveedor= models.IntegerField()
